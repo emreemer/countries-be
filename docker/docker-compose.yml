@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgresql:
+    image: postgres:15
+    container_name: postgres_countries
+    environment:
+      POSTGRES_DB: ${POSTGRES_DATABASE}   # .env kullanıyoruz format gibi env nin aynı dizinde olması gerekiyor.
+      POSTGRES_HOST: ${POSTGRES_HOST}           # env yi gitignore ye koymamız gerekiyor ki github da gözükmesin.
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_ROOT_PASSWORD: ${POSTGRES_ROOT_PASSWORD}
+    ports:
+      - ${POSGTRES_PORT}:5432
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data

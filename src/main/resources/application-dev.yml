@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/countries_dev
+    username: postgres
+    password: p.postgres
+  jpa:
+    #database-platform: org.hibernate.dialect.PostgresSQLDialect    //bunu açınca hata veriyor çalışmıyor çünkü zaten sadece postgresql var bizde
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+
+#branchi olusturduktan sonra meslea db_connection diye bir branc olusturmustuk bununla isimiz bitti databaseyi bagladik
+#artik bu branci main branchine merge edip silmememiz gerekiyor
+

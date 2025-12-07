@@ -11,6 +11,20 @@ spring:
       hibernate:
         show_sql: false
 
+
+
+
+
 #branchi olusturduktan sonra meslea db_connection diye bir branc olusturmustuk bununla isimiz bitti databaseyi bagladik
 #artik bu branci main branchine merge edip silmememiz gerekiyor
+# git add.
+# git commit -m "sss"
+# git branch  //kontrol için
+# git log //neler değişmiş
+# git checkout main  //maine geç geçtiğinde yaptığın değişiklikler daha maine aktarılmadı
+# git merge db_connection
 
+# git branch -D db_connection //artık branchi silebiliriz silme komutu sadece main kaldı.
+
+#bu dal işlemlerini: iş takibini kolaylaştırmak için, belli iş paketlerini sadece belirli branchlerde yapabilmek için
+#proje takibi ve yönetilmesini kolaylastiriyor.
